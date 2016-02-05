@@ -1,4 +1,4 @@
-# DemirPHP CSRF Sınıfı
+# DemirPHP CSRF Koruma Sınıfı
 CSRF açığını önlemek amacıyla geliştirilmiş belirti (token) oluşturup/kontrol eden bir PHP sınıfı
 
 ## Kullanımı
