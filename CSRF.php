@@ -8,7 +8,6 @@
  * @package CSRF
  * @version 1.0
  */
-
 class CSRF
 {
 	/**
