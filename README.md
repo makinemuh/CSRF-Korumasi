@@ -10,6 +10,12 @@ echo Csrf::field();
 // Örnek çıktı: 
 // <input type="hidden" name="csrf" value="M2I4ODRhYTkyNTI1M2RkMWFlNTlmMTVjODY2ZjE2Mzg3OWQ5MDQyMw=="> 
 ```
+ya da şu şekilde:
+```php
+session_start();
+$token = Csrf::token();
+echo '<input type="text" name="_csrfToken" value="$token">';
+```
 
 Daha sonra, POST ettiğimiz sayfada kontrolü şu şekilde yapıyoruz:
 
@@ -31,4 +37,5 @@ if (Csrf::check()) {
 
 ```php
 Csrf::timeout(30*60); // 30 tane 60 saniye, 30 dakika
+var_dump(Csrf::check()); // true|false
 ```
