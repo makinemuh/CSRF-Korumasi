@@ -1,6 +1,15 @@
 <?php
 
-class Csrf
+/**
+ * CSRF Koruma Sınıfı
+ * Bu sınıf ile CSRF saldırılarına karşı önlem alabilirsiniz
+ * @author Yılmaz Demir <demiriy@gmail.com>
+ * @link http://demirphp.com
+ * @package CSRF
+ * @version 1.0
+ */
+
+class CSRF
 {
 	/**
 	 * Zaman aşımını belirler (saniye)
