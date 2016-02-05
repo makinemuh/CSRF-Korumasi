@@ -96,10 +96,10 @@ class Csrf
 	 */
 	public static function timeout($timeout = null)
 	{
-		if (is_null($timeout)) $timeout = self::$timeout;
+		if (!is_null($timeout)) self::$timeout = $timeout;
 
 		if (isset($_SESSION['csrf']['time'])) {
-			return ($_SERVER['REQUEST_TIME'] - $_SESSION['csrf']['time']) < $timeout;
+			return ($_SERVER['REQUEST_TIME'] - $_SESSION['csrf']['time']) < self::$timeout;
 		}
 		return;
 	}
